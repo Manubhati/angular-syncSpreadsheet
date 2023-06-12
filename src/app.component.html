@@ -1,0 +1,39 @@
+<!-- custom code start -->
+<!-- custom code end -->
+<div class="control-section">
+    <ejs-spreadsheet #spreadsheet (created)="created()">
+        <e-sheets>
+            <e-sheet name="Gross Pay">
+                <e-ranges>
+                    <e-range [dataSource]="grossPay" startCell="A3"></e-range>
+                </e-ranges>
+                <e-rows>
+                    <e-row>
+                        <e-cells>
+                            <e-cell value="Gross Pay Calculation" [style]="{fontSize: '20pt', fontWeight: 'bold', textAlign: 'center', backgroundColor: '#B3FFB3', verticalAlign: 'middle'}"></e-cell>
+                        </e-cells>
+                    </e-row>
+                    <e-row index= "13">
+                        <e-cells>
+                            <e-cell index= "7" value="Total Gross" [style]="{border: '1px solid #A6A6A6', textAlign: 'center', verticalAlign: 'middle', fontWeight: 'bold'}"></e-cell>
+                            <e-cell index= "8" formula="=Sum(I4:I13)" [format]="currencyFormat" [style]="{border: '1px solid #A6A6A6', textAlign: 'center', verticalAlign: 'middle', fontWeight: 'bold'}"></e-cell>
+                        </e-cells>
+                    </e-row>
+                </e-rows>
+                <e-columns>
+                    <e-column [width]=88></e-column>
+                    <e-column [width]=50></e-column>
+                    <e-column [width]=106></e-column>
+                    <e-column [width]=98></e-column>
+                    <e-column [width]=110></e-column>
+                    <e-column [width]=110></e-column>
+                    <e-column [width]=110></e-column>
+                    <e-column [width]=98></e-column>
+                    <e-column [width]=130></e-column>
+                </e-columns>
+            </e-sheet>
+        </e-sheets>
+    </ejs-spreadsheet>
+</div>
+<!-- custom code start -->
+<!-- custom code end -->
